@@ -1,11 +1,12 @@
-<h2>{{ task.title }}</h2>
-<div><h3>title: </h3>
-  <input [(ngModel)]="task.title" placeholder="title">
-</div>
-<div><h3>id: </h3>{{task.id}}</div>
-<div><h3>start: </h3>{{task.start | date:'shortDate'}}</div>
-<div><h3>end: </h3>{{task.end | date:'shortDate'}}</div>
-<div>
-  <h3>tags:</h3>
-  <span class="tag" *ngFor="let tag of task.tags">{{tag}}</span>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{task.id}}: {{task.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{task.start | date:'shortDate'}} - {{task.end | date:'shortDate'}}</h6>
+    <p class="card-text">{{task.description}}</p>
+    <p class="tag badge badge-secondary badget-pill" *ngFor="let tag of task.tags">{{tag}}</p>
+    <div>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
 </div>
