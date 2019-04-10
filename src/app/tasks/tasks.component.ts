@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../shared/models/task';
+import { TaskService } from '../shared/services/task.service';
 
 @Component({
   selector: 'app-tasks',
@@ -7,18 +8,17 @@ import { Task } from '../shared/models/task';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  task: Task = {
-    id: 1,
-    title: 'Populate Space Numbers',
-    start: new Date('3/1/2019'),
-    end: new Date('5/1/2019'),
-    tags: ['space_numbering', 'gis', 'floorplans'],
-    description: 'Add space numbers to all room polygons'
-  }
+  tasks: Task[];
 
-  constructor() { }
+  constructor(private taskService: TaskService) { }
 
   ngOnInit() {
+    this.getTasks();
+  }
+
+  getTasks(): void {
+    this.taskService.getTasks()
+      .subscribe(tasks => this.tasks = tasks);
   }
 
 }

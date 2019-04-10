@@ -1,12 +1,3 @@
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">{{task.id}}: {{task.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{task.start | date:'shortDate'}} - {{task.end | date:'shortDate'}}</h6>
-    <p class="card-text">{{task.description}}</p>
-    <p class="tag badge badge-secondary badget-pill" *ngFor="let tag of task.tags">{{tag}}</p>
-    <div>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
+<div class="tasks">
+  <app-task-detail *ngFor="let task of tasks" [task]="task"></app-task-detail>
 </div>
