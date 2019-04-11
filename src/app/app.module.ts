@@ -15,6 +15,7 @@ import { UiModule } from './ui/ui.module';
 import { RoadmapModule } from './roadmap/roadmap.module';
 
 import { InMemoryDataService }  from './in-memory-data.service';
+import { PipesModule } from './shared/modules/pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
     UiModule,
     RoadmapModule,
     HttpClientModule,
+    PipesModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

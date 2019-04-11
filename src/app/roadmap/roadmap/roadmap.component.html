@@ -1,0 +1,15 @@
+<table>
+    <thead>
+      <tr>
+        <th *ngFor="let x of roadMapDates.nWeeks | times">{{ x }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let y of roadMapDates.rowCount | times">
+        <th scope="row">{{ y }}</th>
+        <td *ngFor="let x of roadMapDates.nWeeks | times">
+            <input type="checkbox" checked>
+        </td>
+      </tr>
+    </tbody>
+</table>
