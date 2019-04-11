@@ -8,9 +8,11 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
-import { UiModule } from './ui/ui.module';
 import { HomeComponent } from './home/home.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
+
+import { UiModule } from './ui/ui.module';
+import { RoadmapModule } from './roadmap/roadmap.module';
 
 import { InMemoryDataService }  from './in-memory-data.service';
 
@@ -26,6 +28,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
     FormsModule,
     AppRoutingModule,
     UiModule,
+    RoadmapModule,
     HttpClientModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
