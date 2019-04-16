@@ -1,15 +1,3 @@
-<table>
-    <thead>
-      <tr>
-        <th class="roadmap-col" *ngFor="let x of roadMapDates.nWeeks | times">{{ x }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let y of roadMapDates.rowCount | times">
-        <th scope="row">{{ y }}</th>
-        <td *ngFor="let x of roadMapDates.nWeeks | times">
-            <input type="checkbox" checked>
-        </td>
-      </tr>
-    </tbody>
-</table>
+<div class="roadmap" [ngStyle]="{'width': (roadMapDates.nCols * 6.25) + 'em'}">
+  <div class="roadmap-col" *ngFor="let d of roadMapDates.dateColumns">{{ d | date:'MMM dd yy' }}</div>
+</div>

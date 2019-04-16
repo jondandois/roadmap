@@ -1,3 +1,8 @@
 .roadmap {
     display: grid;
+    text-align: center;
+    grid-template-columns: repeat( auto-fill, 6em );
+}
+.roadmap-col {
+    border: 1px solid darkgray;
 }

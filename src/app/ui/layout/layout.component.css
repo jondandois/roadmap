@@ -1,3 +1,6 @@
 .main.container {
     max-width: 95%;
 }
+.jumbotron {
+    overflow-x: auto;
+}
